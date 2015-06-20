@@ -8,10 +8,6 @@ import android.view.ViewGroup;
 
 import it_aces.todoit.R;
 
-
-/**
- * A placeholder fragment containing a simple view.
- */
 public class SignInFragment extends Fragment {
 
     public SignInFragment() {

@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 
 import it_aces.todoit.R;
 
-public class FirstSlide extends Fragment {
+public class FourthSlide extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fifth, container, false);
+        return inflater.inflate(R.layout.fourth, container, false);
     }
 }
