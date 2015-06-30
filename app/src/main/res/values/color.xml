@@ -7,4 +7,6 @@
     <color name="colorPenBG">#F26232</color>
     <color name="colorRocketBG">#FBAD18</color>
     <color name="colorPlaneBG">#25BEBC</color>
+
+    <color name="colorTextPrimary">#FFFFFF</color>
 </resources>

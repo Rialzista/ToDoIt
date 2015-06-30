@@ -1,48 +1,27 @@
 package it_aces.todoit.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import it_aces.todoit.R;
+import it_aces.todoit.fragments.NewTaskFragment;
 
-public class MainActivity extends AppCompatActivity {
-
-    private Toolbar mToolbar;
-    private FloatingActionButton mNewFab;
-
+public class NewTaskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_task);
 
-        setContentView(R.layout.activity_main);
-
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle("TODAY");
-        mToolbar.setSubtitle("JUNE 2015");
-
-        mNewFab = (FloatingActionButton) findViewById(R.id.fab_add);
-        mNewFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent addNewTaskIntent = new Intent(MainActivity.this, NewTaskActivity.class);
-                startActivity(addNewTaskIntent);
-            }
-        });
-
-        setSupportActionBar(mToolbar);
+        getFragmentManager().beginTransaction().replace(R.id.container, NewTaskFragment.newInstance()).commit();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_new_task, menu);
         return true;
     }
 
