@@ -1,7 +1,9 @@
 package it_aces.todoit.activities;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -10,10 +12,21 @@ import it_aces.todoit.fragments.NewTaskFragment;
 
 public class NewTaskActivity extends AppCompatActivity {
 
+    Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_task);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         getFragmentManager().beginTransaction().replace(R.id.container, NewTaskFragment.newInstance()).commit();
     }
@@ -35,6 +48,8 @@ public class NewTaskActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == android.R.id.home) {
+            this.finish();
         }
 
         return super.onOptionsItemSelected(item);

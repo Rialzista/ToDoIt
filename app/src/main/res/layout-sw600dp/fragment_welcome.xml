@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#28b5f5"
+    android:layout_weight="10"
+    android:id="@+id/main">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/tablet_port_logobig"/>
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Свежие новости \nвсегда под рукой"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textSize="44sp"
+        android:textColor="#FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/pic"
+
+        android:layout_centerInParent="true"
+        android:layout_above="@id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tablet_port_hand"/>
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#0187d0"
+        android:layout_width="match_parent"
+        android:layout_height="96dp" />
+
+</RelativeLayout>

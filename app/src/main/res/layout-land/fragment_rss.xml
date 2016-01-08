@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#28b5f5"
+    android:id="@+id/main">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/phone_port_logosmall"/>
+
+    <LinearLayout
+        android:layout_above="@id/bottom"
+        android:layout_width="460dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_weight=".15"
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingLeft="5dp"
+            android:text="Представляем новую возможность - добавление RSS-лент"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="22dp"
+            android:textColor="#FFFFFF"/>
+
+        <ImageView
+            android:layout_weight=".20"
+            android:id="@+id/pic"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/phone_port_rssbig"/>
+
+        <LinearLayout
+            android:layout_weight=".15"
+            android:id="@+id/add_resource"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/phone_land_plusbtn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="Добавить ресурс"
+                android:layout_gravity="center_vertical"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#0187d0"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+</RelativeLayout>

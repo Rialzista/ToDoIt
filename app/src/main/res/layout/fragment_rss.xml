@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#28b5f5"
+    android:id="@+id/main">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/phone_port_logosmall"/>
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Представляем новую возможность - добавление RSS-лент"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="5dp"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_below="@id/welcome_text"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_port_rssbig"/>
+
+    <LinearLayout
+        android:layout_below="@id/pic"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/add_resource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/phone_land_plusbtn"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить ресурс"
+            android:layout_gravity="center_vertical"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#0187d0"
+        android:layout_width="match_parent"
+        android:layout_height="96dp" />
+
+</RelativeLayout>
